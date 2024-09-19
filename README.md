@@ -5,5 +5,5 @@ Lincoln Tayler: artist, Cole Tayler:leader, Jack Morrison:artist, Jack Derum:scr
 # Overview of Game #1
 Tower defense similar to BTD 6
 # Overview of Game #2
-Tower defense
+Tower defense similar to field runners
 # Images of Mockups
