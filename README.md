@@ -24,8 +24,8 @@ Our control schemes are very intuitive and accessible because it is easy to navi
 
 
 # 6:Technical Requirements:
-We will be using processing.org.
-A challenging part of the programming will be the hit detection between the projectiles and the target.
+* We will be using processing.org.
+* A challenging part of the programming will be the hit detection between the projectiles and the target.
 # 7:Team Roles and Collaboration:
 * Coder: Jack Morrison,  Art: Lincoln Tayler, Manager: Jack Durram, Designer: Cole Tayler
 * We will use GitHub to collaborate.
