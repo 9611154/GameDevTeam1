@@ -35,3 +35,4 @@ Our control schemes are very intuitive and accessible because it is easy to navi
 *Cole Tayler did the Gameplay/map picture
 ![Gameplay01](https://github.com/9611154/GameDevTeam1/blob/main/images/bloonstdmap.png)
 ![Game Over display screen by Jack Derum](https://github.com/9611154/GameDevTeam1/blob/main/images/gameover.pdf)
+ ![BTDjm.draw.io.png](https://github.com/9611154/GameDevTeam1/blob/main/images/BTDjm.drawio.png)
