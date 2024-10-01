@@ -32,4 +32,5 @@ Our control schemes are very intuitive and accessible because it is easy to navi
 # 8. Target Audience:
 * Our game is for casual gamers who want to chill and still have some thought into the game they are playing. 
 * Our game is more cartoony and has a bright and colorful map, the main characters are monkeys so our game might be considered good for younger audiences.
-
+*Cole Tayler did the Gameplay/map picture
+![Gameplay01](https://github.com/9611154/GameDevTeam1/blob/main/images/bloonstdmap.png)
