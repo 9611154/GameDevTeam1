@@ -34,6 +34,6 @@ Our control schemes are very intuitive and accessible because it is easy to navi
 * Our game is more cartoony and has a bright and colorful map, the main characters are monkeys so our game might be considered good for younger audiences.
 *Cole Tayler did the Gameplay/map picture
 ![Gameplay01](https://github.com/9611154/GameDevTeam1/blob/main/images/bloonstdmap.png)
-![Game Over display screen by Jack Derum](https://github.com/9611154/GameDevTeam1/blob/main/images/gameover.pdf)
+![GameOverdisplayscreenbyJackDerum](https://github.com/9611154/GameDevTeam1/blob/main/images/gameover.pdf)
  ![BTDjm.draw.io.png](https://github.com/9611154/GameDevTeam1/blob/main/images/BTDjm.drawio.png)
 ![StartscreenLT](https://github.com/9611154/GameDevTeam1/blob/main/images/Start%20screen%20LT.png)
