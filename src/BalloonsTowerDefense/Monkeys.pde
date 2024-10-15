@@ -2,10 +2,11 @@
 class Monkeys {
   // Member variables
   PImage g1;
-  int x,y,w,h;
-  damage;
+  int x, y, w, h;
+  float damage;
   char type;
-  
+  boolean alive;
+
   // Constructor
   Monkeys() {
     g1 = loadImage("");
@@ -19,9 +20,9 @@ class Monkeys {
   }
   // Member Methods
   void display() {
-    imageMode(CENTER)
+    imageMode(CENTER);
     // g1.resize(50,50);
-    image(g1,x,y);
+    image(g1, x, y);
   }
   void move() {
     x = x + 1;

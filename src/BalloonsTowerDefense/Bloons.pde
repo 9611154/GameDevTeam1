@@ -2,16 +2,16 @@
 class Bloons {
   // Member Variables
   PImage g1;
-  int x,y,w,h;
-  float health,speed,damage;
-  boolean alice;
+  int x, y, w, h;
+  float health, speed, damage;
+  boolean alive;
   char type;
 
   // Constructor
   Bloons() {
-    g1 = loadImage("");
+    g1 = loadImage("BaloonLT.png");
     x = width/2;
-    y = height/2
+    y = height/2;
     w = 50;
     h = 50;
     health = 100;
@@ -22,13 +22,12 @@ class Bloons {
   }
 
   // Member Methods
-    void display() {
-      imageMode(CENTER);
-      g1.resize(50,50);
-      image(g1,x,y);
-    }
-    void move() {
-      x = x + 1;
-    }
-
+  void display() {
+    imageMode(CENTER);
+    g1.resize(50, 50);
+    image(g1, x, y);
+  }
+  void move() {
+    x = x + 1;
+  }
 }
