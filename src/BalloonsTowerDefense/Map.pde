@@ -1,4 +1,4 @@
-// Jack Derum | 3 Oct 2024
+// Lincoln Tayler | 3 Oct 2024
 class Map {
   // Member Variables
   PImage g1;
