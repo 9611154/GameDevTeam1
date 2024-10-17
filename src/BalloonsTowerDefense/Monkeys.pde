@@ -1,7 +1,7 @@
 // Jack Morrison | 3 Oct 2024
 class Monkeys {
   // Member variables
-  PImage m1;
+  PImage m1, c1;
   int x,y,w,h;
   float damage;
   char type;
@@ -10,6 +10,7 @@ class Monkeys {
   // Constructor
   Monkeys() {
     m1 = loadImage("m1jm.png");
+    c1 = loadImage("c1.png");
     x = width/2;
     y = height/2;
     w = 50;
@@ -28,4 +29,3 @@ class Monkeys {
     x = x + 1;
   }
 }
-
