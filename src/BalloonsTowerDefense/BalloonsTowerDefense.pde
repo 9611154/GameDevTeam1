@@ -5,7 +5,8 @@ ArrayList<Darts> darts = new ArrayList<Darts>();
 ArrayList<Bloons> bloons = new ArrayList<Bloons>();
 boolean play;
 PImage start1, game1;
-Bloons b1;
+Timer t1;
+
 
 void setup() {
   size(800, 500);
@@ -35,7 +36,7 @@ void startScreen() {
   image(start1, 0, 0);
   if (mousePressed) {
     play = true;
-    loadImage("baloonlt.png");
+
   }
 }
 
