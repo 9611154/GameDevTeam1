@@ -4,7 +4,7 @@ int level;
 ArrayList<Darts> darts = new ArrayList<Darts>();
 ArrayList<Bloons> bloons = new ArrayList<Bloons>();
 boolean play;
-PImage start1, game1;
+PImage start1, game1, dart1;
 Timer t1;
 
 
@@ -14,7 +14,8 @@ void setup() {
   g1 = new Bloons();
   play = false;
   start1 = loadImage("StartscreenLT.png") ;
-  game1 = loadImage("bloonstdmap.png");
+  game1 = loadImage("map2.png");
+  dart1 = loadImage("dart1.png");
 
 }
 
@@ -23,7 +24,7 @@ void draw() {
     startScreen();
   } else {
     // you are playing the game
-    loadImage("bloonstdmap.png");
+    loadImage("map2.png");
     image(game1, 0, 0);
     g1.display();
   }
