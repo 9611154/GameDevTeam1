@@ -1,8 +1,9 @@
 // Title
 Bloons g1;
+Darts d1;
 int level;
-ArrayList<Darts> darts = new ArrayList<Darts>();
-ArrayList<Bloons> bloons = new ArrayList<Bloons>();
+//ArrayList<Darts> darts = new ArrayList<Darts>();
+//ArrayList<Bloons> bloons = new ArrayList<Bloons>();
 boolean play;
 PImage start1, game1, dart1;
 Timer t1;
@@ -12,6 +13,7 @@ void setup() {
   size(800, 500);
   level = 1;
   g1 = new Bloons();
+  d1 = new Darts();
   play = false;
   start1 = loadImage("StartscreenLT.png") ;
   game1 = loadImage("map2.png");
@@ -27,6 +29,7 @@ void draw() {
     loadImage("map2.png");
     image(game1, 0, 0);
     g1.display();
+    d1.display();
   }
 }
 
