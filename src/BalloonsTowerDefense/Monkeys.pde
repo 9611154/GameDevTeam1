@@ -16,8 +16,8 @@ class Monkeys {
       m1 = loadImage("m1jm.png");
     }
 
-    x = width/2;
-    y = height/2;
+    x = int(random(400));
+    y = int(random(400));
     w = 50;
     h = 50;
     damage = 10;
