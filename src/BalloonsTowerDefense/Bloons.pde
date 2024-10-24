@@ -1,15 +1,15 @@
-//Lincoln Tayler | 3 Oct 2024
-class Bloons {
+// Cole Tayler | 3 Oct 2024
+class Darts {
   // Member Variables
   PImage g1;
   int x, y, w, h;
   float health, speed, damage;
-  boolean alive;
   char type;
+  boolean alive;
 
   // Constructor
-  Bloons() {
-    g1 = loadImage("BaloonLT.png");
+  Darts() {
+    g1 = loadImage("");
     x = width/2;
     y = height/2;
     w = 50;
@@ -24,8 +24,8 @@ class Bloons {
   // Member Methods
   void display() {
     imageMode(CENTER);
-    g1.resize(50, 50);
-    image(g1, 100,100);
+    // g1.resize(50,50);
+    image(g1, x, y);
   }
   void move() {
     x = x + 1;
