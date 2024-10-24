@@ -1,7 +1,7 @@
 // Cole Tayler | 3 Oct 2024
 class Darts {
   // Member Variables
-  PImage g1;
+  PImage d1;
   int x, y, w, h;
   float health, speed, damage;
   char type;
@@ -9,7 +9,7 @@ class Darts {
 
   // Constructor
   Darts() {
-    g1 = loadImage("dart2.png");
+    d1 = loadImage("dart1.png");
     x = 100;
     y = 100;
     w = 50;
@@ -24,8 +24,8 @@ class Darts {
   // Member Methods
   void display() {
     imageMode(CENTER);
-    g1.resize(50, 50);
-    image(g1, x, y);
+    d1.resize(50, 50);
+    image(d1, x, y);
   }
   void move() {
     x = x + 1;
