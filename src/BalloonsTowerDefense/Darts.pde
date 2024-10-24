@@ -9,9 +9,9 @@ class Darts {
 
   // Constructor
   Darts() {
-    g1 = loadImage("");
-    x = width/2;
-    y = height/2;
+    g1 = loadImage("dart2.png");
+    x = 100;
+    y = 100;
     w = 50;
     h = 50;
     health = 100;
@@ -24,7 +24,7 @@ class Darts {
   // Member Methods
   void display() {
     imageMode(CENTER);
-    // g1.resize(50,50);
+    g1.resize(50, 50);
     image(g1, x, y);
   }
   void move() {
