@@ -5,7 +5,7 @@ class Monkeys {
   int x, y, w, h;
   float damage;
   char type;
-  boolean alive;
+  boolean alive, on;
 
   // Constructor
   Monkeys(char type) {
@@ -22,6 +22,7 @@ class Monkeys {
     h = 50;
     damage = 10;
     alive = true;
+    on = false;
   }
   // Member Methods
   void display() {
@@ -29,7 +30,16 @@ class Monkeys {
     //g1.resize(50,50);
     image(m1, x, y);
   }
-  void move() {
-    x = x + 1;
+  void move(int tempx, int tempy) {
+    x = tempx;
+    y = tempy;
+  }
+ 
+  void hover(int tempx, int tempy) {
+    if(tempx > x- w/2 && tempx < x+ w/2 && tempy > y- h/2 && tempy < y+ h/2) {
+      on = true;
+    } else {
+      on = false;
+    }
   }
 }
