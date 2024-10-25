@@ -25,7 +25,7 @@ class Bloons {
   void display() {
     imageMode(CENTER);
     g1.resize(50, 50);
-    image(g1, 100,100);
+    image(g1, x, y);
   }
   void move() {
     x = x + 1;
