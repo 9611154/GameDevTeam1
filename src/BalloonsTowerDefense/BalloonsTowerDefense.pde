@@ -8,7 +8,7 @@ int level;
 boolean play;
 PImage start1, press, game1, dart1;
 Timer t1;
-
+InfoPanel p1;
 
 void setup() {
   size(800, 500);
@@ -17,11 +17,11 @@ void setup() {
   d1 = new Darts();
   play = false;
   start1 = loadImage("start1.png") ;
-  press = loadImage("press.png");
   game1 = loadImage("newmap1.png");
   dart1 = loadImage("dart2.png");
-  m1 = new Monkeys ('t');
-  c1 = new Monkeys ('c');
+  m1 = new Monkeys('t');
+  c1 = new Monkeys('c');
+  p1 = new InfoPanel(10,20,30,40);
 }
 
 void draw() {
@@ -36,6 +36,7 @@ void draw() {
     d1.display();
     c1. display();
     m1. display();
+    p1.display();
   }
 }
 
