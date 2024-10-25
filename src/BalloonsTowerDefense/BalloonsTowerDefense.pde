@@ -33,11 +33,11 @@ void draw() {
     imageMode(CORNER);
     image(game1, 0, 0);
     g1.display();
-    d1.display();
-    c1. display();
-    m1. display();
-    p1.display();
-  }
+    c1.display();
+    c1.hover(mouseX, mouseY);
+    m1.display();
+    m1.hover(mouseX, mouseY);
+    d1.display();  }
 }
 
 void mousePressed() {
@@ -51,4 +51,14 @@ void startScreen() {
 }
 
 void gameOver() {
+}
+
+void mouseDragged() {
+  if (c1.on) {
+    c1.move(mouseX, mouseY);
+  }
+  if (m1.on) {
+
+    m1.move(mouseX, mouseY);
+  }
 }
