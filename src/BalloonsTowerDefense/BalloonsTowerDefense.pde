@@ -1,12 +1,12 @@
 // Title
 Bloons g1;
-Monkeys c1, m1;
 Darts d1;
+Monkeys c1, m1;
 int level;
 //ArrayList<Darts> darts = new ArrayList<Darts>();
 //ArrayList<Bloons> bloons = new ArrayList<Bloons>();
 boolean play;
-PImage start1, game1, dart1;
+PImage start1, press, game1, dart1;
 Timer t1;
 
 
@@ -14,26 +14,28 @@ void setup() {
   size(800, 500);
   level = 1;
   g1 = new Bloons();
-  play = false;
-  start1 = loadImage("btdstartscreen.png") ;
-  game1 = loadImage("bloonstdmap.png");
-  m1 =  new Monkeys('t');
-  c1 = new Monkeys('c');
-  dart1 = loadImage("dart1.png");
   d1 = new Darts();
+  play = false;
+  start1 = loadImage("start1.png") ;
+  press = loadImage("press.png");
+  game1 = loadImage("newmap1.png");
+  dart1 = loadImage("dart2.png");
+  m1 = new Monkeys ('t');
+  c1 = new Monkeys ('c');
 }
 
 void draw() {
   if (play == false) {
     startScreen();
   } else {
+    background(127);
     // you are playing the game
-    loadImage("bloonstdmap.png");
+    imageMode(CORNER);
     image(game1, 0, 0);
     g1.display();
-    c1.display();
-    m1.display();
     d1.display();
+    c1. display();
+    m1. display();
   }
 }
 
