@@ -21,7 +21,7 @@ void setup() {
   dart1 = loadImage("dart2.png");
   m1 = new Monkeys('t');
   c1 = new Monkeys('c');
-  p1 = new InfoPanel(10,20,30,40);
+  p1 = new InfoPanel(10, 20, 30, 40);
 }
 
 void draw() {
@@ -33,11 +33,13 @@ void draw() {
     imageMode(CORNER);
     image(game1, 0, 0);
     g1.display();
-    c1.display();
+    d1.display();
+    c1. display();
     c1.hover(mouseX, mouseY);
-    m1.display();
+    m1. display();
     m1.hover(mouseX, mouseY);
-    d1.display();  }
+    p1.display();
+  }
 }
 
 void mousePressed() {
