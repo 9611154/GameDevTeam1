@@ -10,8 +10,8 @@ class Bloons {
   // Constructor
   Bloons() {
     g1 = loadImage("BaloonLT.png");
-    x = width/2;
-    y = height/2;
+    x = 57;
+    y = 0;
     w = 50;
     h = 50;
     health = 100;
@@ -28,6 +28,24 @@ class Bloons {
     image(g1, x, y);
   }
   void move() {
-    x = x + 1;
+    moveDown(5);
+    moveRight(10);
+
+  }
+  void moveRight(int count){
+    for(int i = 0; i < count; i++){
+      x += i; 
+    }
+    //x = x + int(speed);
+  }
+  void moveUp(int count){
+    for(int i = 0; i < count; i++){
+      y -= i; 
+    }
+  }
+  void moveDown(int count){
+    for(int i = 0; i < count; i++){
+      y += i; 
+    }
   }
 }
