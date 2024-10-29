@@ -33,6 +33,7 @@ void draw() {
     imageMode(CORNER);
     image(game1, 0, 0);
     g1.display();
+    g1.move();
     d1.display();
     c1. display();
     c1.hover(mouseX, mouseY);
