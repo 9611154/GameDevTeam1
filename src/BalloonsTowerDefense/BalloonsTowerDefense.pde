@@ -2,7 +2,7 @@
 Bloons g1;
 Darts d1;
 Monkeys c1, m1;
-int level;
+int level, difficulty;
 //ArrayList<Darts> darts = new ArrayList<Darts>();
 //ArrayList<Bloons> bloons = new ArrayList<Bloons>();
 boolean play;
@@ -13,7 +13,7 @@ InfoPanel p1;
 void setup() {
   size(800, 500);
   level = 1;
-  g1 = new Bloons();
+
   d1 = new Darts();
   play = false;
   start1 = loadImage("start1.png") ;
@@ -22,18 +22,22 @@ void setup() {
   m1 = new Monkeys('t');
   c1 = new Monkeys('c');
   p1 = new InfoPanel(10, 20, 30, 40);
+  difficulty = 2;
+  g1 = new Bloons(difficulty);
 }
 
 void draw() {
   if (play == false) {
     startScreen();
   } else {
+    println("mousex" + mouseX + "mousey" + mouseY);
     background(127);
     // you are playing the game
     imageMode(CORNER);
     image(game1, 0, 0);
+    //g1.update(path);
     g1.display();
-    g1.move();
+    
     d1.display();
     c1. display();
     c1.hover(mouseX, mouseY);
