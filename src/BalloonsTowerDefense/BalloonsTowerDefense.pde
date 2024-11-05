@@ -9,6 +9,7 @@ boolean play;
 PImage start1, press, game1, dart1;
 Timer t1;
 InfoPanel p1;
+Path path;
 
 void setup() {
   size(800, 500);
@@ -24,6 +25,7 @@ void setup() {
   p1 = new InfoPanel(10, 20, 30, 40);
   difficulty = 2;
   g1 = new Bloons(difficulty);
+  path = new Path();
 }
 
 void draw() {
@@ -37,7 +39,8 @@ void draw() {
     image(game1, 0, 0);
     //g1.update(path);
     g1.display();
-    
+    path.display();
+    g1.update(path);
     d1.display();
     c1. display();
     c1.hover(mouseX, mouseY);
