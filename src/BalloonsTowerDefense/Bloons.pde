@@ -6,12 +6,14 @@ class Bloons {
   float health, speed, damage;
   boolean alive;
   char type;
+  PVector position;
+  int pointIndex = 0; // Which path point the enemy is heading towards
 
   // Constructor
-  Bloons() {
+  Bloons(float diff) {
     g1 = loadImage("BaloonLT.png");
-    x = 57;
-    y = 0;
+    x = width/2;
+    y = height/2;
     w = 50;
     h = 50;
     health = 100;
@@ -19,6 +21,8 @@ class Bloons {
     damage = 10;
     alive = true;
     type = 'b';
+    position = new PVector(x, y);
+    speed = 0.5 * diff; // Speed based on difficulty
   }
 
   // Member Methods
@@ -27,25 +31,28 @@ class Bloons {
     g1.resize(50, 50);
     image(g1, x, y);
   }
-  void move() {
-    moveDown(5);
-    moveRight(10);
 
-  }
-  void moveRight(int count){
-    for(int i = 0; i < count; i++){
-      x += i; 
+  void update(Path p) {
+    // Get the next point on the path
+    PVector target = p.getPoint(pointIndex);
+
+    // Move towards the next point
+    PVector direction = PVector.sub(target, position);
+    direction.normalize();
+    direction.mult(speed);
+    position.add(direction);
+
+    // Check if close enough to target point to move to next point
+    if (PVector.dist(position, target) < 5) {
+      pointIndex++;
     }
-    //x = x + int(speed);
   }
-  void moveUp(int count){
-    for(int i = 0; i < count; i++){
-      y -= i; 
-    }
+
+  boolean isOffScreen() {
+    return position.x > width;
   }
-  void moveDown(int count){
-    for(int i = 0; i < count; i++){
-      y += i; 
-    }
+
+  void move() {
+    x = x + 1;
   }
 }
