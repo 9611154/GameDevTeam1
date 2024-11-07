@@ -1,4 +1,5 @@
 // Title
+import processing.sound.*;
 Bloons g1;
 Darts d1;
 Monkeys c1, m1;
@@ -10,6 +11,7 @@ PImage start1, press, game1, dart1;
 Timer t1;
 InfoPanel p1;
 Path path;
+SoundFile bongo;
 
 void setup() {
   size(800, 500);
@@ -26,6 +28,7 @@ void setup() {
   difficulty = 2;
   g1 = new Bloons(difficulty);
   path = new Path();
+  bongo = new SoundFile(this, "handrum2.wav");
 }
 
 void draw() {
@@ -47,6 +50,7 @@ void draw() {
     m1. display();
     m1.hover(mouseX, mouseY);
     p1.display();
+    bongo.play();
   }
 }
 
