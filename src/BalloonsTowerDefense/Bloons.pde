@@ -10,7 +10,7 @@ class Bloons {
   int pointIndex = 0; // Which path point the enemy is heading towards
 
   // Constructor
-  Bloons(float diff) {
+  Bloons(char type) {
     g1 = loadImage("BaloonLT.png");
     x = 50/2;
     y = 1/2;
@@ -22,7 +22,8 @@ class Bloons {
     alive = true;
     type = 'b';
     position = new PVector(x, y);
-    speed = 0.5 * diff; // Speed based on difficulty
+    //speed = 0.5 * diff; // Speed based on difficulty
+    this.type = type;
   }
 
   // Member Methods
@@ -30,6 +31,8 @@ class Bloons {
     imageMode(CENTER);
     g1.resize(50, 50);
     image(g1, position.x, position.y);
+    fill(255);
+    text(health,x, y);
   }
 
   void update(Path p) {
@@ -54,5 +57,21 @@ class Bloons {
 
   void move() {
     x = x + 1;
+  }
+  boolean reachedLeft() {
+    if (x<-50) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  boolean intersect(Bloons b) {
+    float d = dist(x, y, b.x, b.y);
+    if (d<40) {//refine the collision detection
+      return true;
+    } else {
+      return false;
+    }
   }
 }
