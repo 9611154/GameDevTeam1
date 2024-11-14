@@ -16,7 +16,7 @@ SoundFile bongo;
 void setup() {
   size(800, 500);
   level = 1;
-  t1 = new Timer(5000);
+  t1 = new Timer(500);
   t1.start();
   //d1 = new Darts();
   play = false;
@@ -37,29 +37,41 @@ void draw() {
     startScreen();
   } else {
     println("mousex" + mouseX + "mousey" + mouseY);
-    background(127);
+    // background(127);
     if (t1.isFinished()) {
       bloons.add(new Bloons('r'));
     }
 
     // you are playing the game
-    imageMode(CORNER);
+    // imageMode(CORNER);
     //image(game1, 0, 0);
-    background(127);
+    //background(127);
+    imageMode(CORNER);
+    image(game1, 0, 0);
+
     for (int i = 0; i < bloons.size(); i++) {
       Bloons bloon = bloons.get(i);
-      bloon.display();
-      path.display();
+      for (int j = 0; j<darts.size(); j++) {
+        Darts d = darts.get(j);
+        if (bloon.intersect(d)) {
+          //pop sound
+          //dissapear
+          //projectile disappear
+          darts.remove(d);
+          //score increase 100
+        }
+      }
+      background(127);
       bloon.update(path);
 
+      bloon.display();
+      // path.display();
 
-      //bloon.move();
       if (bloon.reachedLeft()) {
         bloons.remove(bloon);
       }
     }
-    imageMode(CENTER);
-    image(game1, 0, 0);
+
     //g1.update(path);
     //g1.display();
     // path.display();
