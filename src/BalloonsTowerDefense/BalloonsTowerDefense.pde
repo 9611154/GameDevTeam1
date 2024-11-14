@@ -2,10 +2,11 @@
 import processing.sound.*;
 //Bloons g1;
 //Darts d1;
-Monkeys c1, m1;
+//Monkeys m1;
 int level, difficulty;
 ArrayList<Darts> darts = new ArrayList<Darts>();
 ArrayList<Bloons> bloons = new ArrayList<Bloons>();
+ArrayList<Monkeys> monkeys = new ArrayList<Monkeys>();
 boolean play;
 PImage start1, press, game1, dart1;
 Timer t1;
@@ -15,6 +16,8 @@ SoundFile bongo;
 
 void setup() {
   size(800, 500);
+  monkeys.add(new Monkeys('t'));
+  monkeys.add(new Monkeys('c'));
   level = 1;
   t1 = new Timer(500);
   t1.start();
@@ -23,8 +26,8 @@ void setup() {
   start1 = loadImage("start1.png") ;
   game1 = loadImage("newmap1.png");
   dart1 = loadImage("dart2.png");
-  m1 = new Monkeys('t');
-  c1 = new Monkeys('c');
+  //m1 = new Monkeys('t');
+  // c1 = new Monkeys('c');
   p1 = new InfoPanel(10, 20, 30, 40);
   difficulty = 2;
   //g1 = new Bloons(difficulty);
@@ -77,10 +80,10 @@ void draw() {
     // path.display();
     //g1.update(path);
     //d1.display();
-    c1. display();
-    c1.hover(mouseX, mouseY);
-    m1. display();
-    m1.hover(mouseX, mouseY);
+    monkeys.get(1).display();
+    monkeys.get(1).hover(mouseX, mouseY);
+    monkeys.get(0).display();
+    monkeys.get(0).hover(mouseX, mouseY);
     p1.display();
     for (int i = 0; i < darts.size(); i++) {
       Darts dart = darts.get(i);
@@ -96,7 +99,7 @@ void draw() {
 }
 
 void mousePressed() {
-  darts.add(new Darts(m1.x, m1.y));
+  darts.add(new Darts(monkeys.get(0).x, monkeys.get(0).y));
 }
 
 void startScreen() {
@@ -110,11 +113,11 @@ void gameOver() {
 }
 
 void mouseDragged() {
-  if (c1.on) {
-    c1.move(mouseX, mouseY);
-  }
-  if (m1.on) {
+  //if (c1.on) {
+  //  c1.move(mouseX, mouseY);
+  //}
+  if (monkeys.get(0).on) {
 
-    m1.move(mouseX, mouseY);
+    monkeys.get(0).move(mouseX, mouseY);
   }
 }
