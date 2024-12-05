@@ -76,6 +76,78 @@ void startScreen() {
   if (mousePressed) {
     play = true;
   }
+  if (wTime.isFinished()) {
+    wTime.start();
+    welcomeCounter++;
+  }
+  background(0);
+  textAlign(CENTER);
+  textSize(40);
+  switch(welcomeCounter) {
+  case 0:
+    fill(255);
+    text("You are about to experience...", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 1:
+    fill(255);
+    text("A journey like no other...", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 2:
+    fill(255);
+    text("Venture into a world of monkeys...", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 3:
+    fill(255);
+    text("and Bloons", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 4:
+    fill(255);
+    text("The Bloons are invading and trying to take over...", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 5:
+    fill (255);
+    text("and only you can stop them", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 6:
+    fill (255);
+    text("They have invaded before, but they were thwarted", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 7:
+    fill (255);
+    text("But now they are BACK, and stronger than ever", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 8:
+    fill (255);
+    text("We don't know why or how you were sent here travler...", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 9:
+    fill (255);
+    text("but we think it was to save us from IMPENDING DOOM", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 10:
+    fill (255);
+    text("It will be your job to rally the troops and set up strategic defenses", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  case 11:
+    fill (255);
+    text("For one wrong move could end us all", width/2, 300);
+    wTime.totalTime = 3000;
+    break;
+  default:
+    println("None");
+    break;
+  }
 }
 
 void gameOver() {
