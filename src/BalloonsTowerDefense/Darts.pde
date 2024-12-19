@@ -8,10 +8,10 @@ class Darts {
   boolean alive;
 
   // Constructor
-  Darts(int x, int y) {
+  Darts() {
     g1 = loadImage("dart2.png");
-    this.x = x;
-    this.y = y;
+    x = 100;
+    y = 100;
     w = 50;
     h = 50;
     health = 100;
@@ -29,13 +29,5 @@ class Darts {
   }
   void move() {
     x = x + 1;
-  }
-  boolean intersect(Bloons b) {
-    float dist = dist(x, y, b.x, b.y);
-    if (dist<20) {
-      return true;
-    } else {
-      return false;
-    }
   }
 }
